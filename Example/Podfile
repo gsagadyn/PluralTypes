@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'PluralTypes_Example' do
+  pod 'PluralTypes', :path => '../'
+
+  target 'PluralTypes_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
