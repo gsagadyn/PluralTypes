@@ -11,6 +11,6 @@ let package = Package(
         .library(name: "PluralTypes", targets: ["PluralTypes"])
     ],
     targets: [
-        .target(name: "PluralTypes", dependencies: [], path: "PluralTypes", resources: [.process("Assets"))
+        .target(name: "PluralTypes", dependencies: [], path: "PluralTypes", resources: [.process("Assets")])
     ]
 )
