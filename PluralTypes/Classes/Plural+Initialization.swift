@@ -5,7 +5,7 @@
 //  Created by Grzegorz Sagadyn on 05.11.2019.
 //
 
-import UIKit
+import Foundation
 
 extension Plural {
     public init(quantity: Int, locale: Locale = .current) {
