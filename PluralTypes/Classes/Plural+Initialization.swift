@@ -5,7 +5,8 @@
 //  Created by Grzegorz Sagadyn on 05.11.2019.
 //
 
-import UIKit
+import Foundation
+import CoreGraphics
 
 extension Plural {
     public init(quantity: Int, locale: Locale = .current) {
@@ -34,7 +35,12 @@ extension Plural {
 // -----------------------------------------------------------------------------
 
 extension Plural {
+    #if SWIFT_PACKAGE
+    private static let bundle = Bundle.module
+    #else
     private static let bundle = Bundle(for: BundleToken.self)
+    #endif
+
     private static let tableName = "Plural"
     
     private static func pluralType<T>(for key: String, locale: Locale, quantity: T) -> Plural {
